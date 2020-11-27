@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/brice/Desktop/printf_dir/ft_printf_school/libft/libft.h
+unistd.h
+-
+stdlib.h
+-
+
+/Users/brice/Desktop/printf_dir/ft_printf_school/main.c
+./libft/libft.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/libft/libft.h
+./parser/ft_parser.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.h
+stdio.h
+-
+stdarg.h
+-
+
+/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.h
+
+/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_struct_init.c
+ft_parser.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.h
+
