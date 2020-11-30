@@ -15,7 +15,9 @@
 s_cn ft_struct_init(s_cn st_struct)
 {
     st_struct.flag = 0;
-    st_struct.i = 0;
+    st_struct.width = 0;
+    st_struct.accuracy = 0;
+ /*   st_struct.i = 0;
     st_struct.width = 0;
     st_struct.p = 0;
     st_struct.accuracy = 0;
@@ -26,6 +28,6 @@ s_cn ft_struct_init(s_cn st_struct)
     st_struct.u = 0;
     st_struct.x = 0;
     st_struct.x_h = 0;
-
+*/
     return st_struct;
 }

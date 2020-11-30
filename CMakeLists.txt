@@ -9,4 +9,14 @@ add_executable( ft_printf_school
         ./libft/ft_strchr.c
         ./parser/ft_struct_init.c
         ./libft.a
+        ./ft_printf.h
+        ./ft_printf.c
+        ./parser/ft_parser.c
+
+
+        ./libft/libft.h
+        ./libft/ft_isdigit.c
+        ./libft/ft_putchar_fd.c
+
+        ./ft_print_char.c
         )

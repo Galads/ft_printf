@@ -78,16 +78,40 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/ft_print_char.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/ft_printf.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/ft_printf.h">
+			<Option target="ft_printf_school"/>
+		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft.a">
 			<Option target="ft_printf_school"/>
 		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_atoi.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_isdigit.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_putchar_fd.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_strchr.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/libft.h">
+			<Option target="ft_printf_school"/>
+		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/main.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.h">
 			<Option target="ft_printf_school"/>
 		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_struct_init.c">

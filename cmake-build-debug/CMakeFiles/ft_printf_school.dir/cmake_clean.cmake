@@ -1,7 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ft_printf_school.dir/ft_print_char.c.o"
+  "CMakeFiles/ft_printf_school.dir/ft_printf.c.o"
   "CMakeFiles/ft_printf_school.dir/libft/ft_atoi.c.o"
+  "CMakeFiles/ft_printf_school.dir/libft/ft_isdigit.c.o"
+  "CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.o"
   "CMakeFiles/ft_printf_school.dir/libft/ft_strchr.c.o"
   "CMakeFiles/ft_printf_school.dir/main.c.o"
+  "CMakeFiles/ft_printf_school.dir/parser/ft_parser.c.o"
   "CMakeFiles/ft_printf_school.dir/parser/ft_struct_init.c.o"
   "ft_printf_school"
   "ft_printf_school.pdb"
