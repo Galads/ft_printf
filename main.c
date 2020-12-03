@@ -31,12 +31,90 @@ void ft_init_args(char *format, ...)
 int		main()
 {
     s_cn conv;
-    conv = ft_struct_init(conv);
+
+    ft_struct_init(&conv);
     char *str = "%6666s";
     char *set;
 
-    ft_printf("dfgdfgdfgdfgs %-----------0.2888123c fdfgdfgdgf %-------c  %  $\n", 'F', '5');
-    printf(" bytes: ++++%d++++\n", printf("123123"));
+    int ret = 0;
+/*
+    ret = ft_printf("musor %-10c musor %10c %*c$\n", 'F', '5', 0, 'q');// % in middle
+
+    //ret = ft_printf("m %*c$\n", 2, 'q');
+    printf("return: %d\n", ret);
+
+    ret = ft_printf("musor %10c  %000000010c %-*c$\n", 'F', '5', 5, 'q');// % in middle
+    printf("return: %d\n", ret);
+
+    printf("+++++++++++++++++++++++++test string+++++++++++++++++++++++++\n");
+    ret = ft_printf("m%-5sm$\n", "abc");// % in middle
+    printf("return: %d\n", ret);
+
+    ret = printf("m%-5sm$\n", "abc");// % in middle
+    printf("return: %d\n", ret);
+    printf("=============================================================\n");
+    ret = ft_printf("m%5sm$\n", "abc");// % in middle
+    printf("return: %d\n", ret);
+
+    ret = printf("m%5sm$\n", "abc");// % in middle
+    printf("return: %d\n", ret);
+
+    printf("=============================================================\n");
+    ret = ft_printf("m%-20sm$\n", "123");// % in middle
+    printf("return: %d\n", ret);
+
+    ret = printf("m%-20sm$\n", "123");// % in middle
+    printf("return: %d\n", ret);
+
+    printf("=============================================================\n");
+
+    ret = ft_printf("m%55.0sm$\n", "123456");// % in middle
+    printf("return: %d\n", ret);
+
+    ret = printf("m%55.0sm$\n", "123456");// % in middle
+    printf("return: %d\n", ret);
+*/
+                        /*
+                         * i
+                         */
+    // printf("|%d|\n", ft_printf("%i!\n", 42));
+    // printf("|%d|\n", printf("%i!\n", 42));
+    // printf("|%d|\n", ft_printf("%3i!\n", 42));
+    // printf("|%d|\n", printf("%3i!\n", 42));
+    // printf("|%d|\n", ft_printf("%5i!\n", 42));
+    // printf("|%d|\n", printf("%5i!\n", 42));
+    // printf("|%d|\n", ft_printf("%5.3i!\n", 42));
+    // printf("|%d|\n", printf("%5.3i!\n", 42));
+    // printf("|%d|\n", ft_printf("%.i!\n", 42));
+    // printf("|%d|\n", printf("%.i!\n", 42));
+    // printf("|%d|\n", ft_printf("%05.i!\n", -42));
+    // printf("|%d|\n", printf("%05.i!\n", -42));
+    // printf("|%d|\n", ft_printf("%30.30i!\n", -42));
+    // printf("|%d|\n", printf("%30.30i!\n", -42));
+    // printf("|%d|\n", ft_printf("%5.i!\n", 0));
+    // printf("|%d|\n", printf("%5.i!\n", 0));
+    // printf("|%d|\n", ft_printf("%02i!\n", 0));
+    // printf("|%d|\n", printf("%02i!\n", 0));
+    // printf("|%d|\n", ft_printf("%03i!\n", 634));
+    // printf("|%d|\n", printf("%03i!\n", 634));
+
+
+ //   ret = ft_printf("m%22.3dm$\n", -42);// % in middle
+   // printf("return: %d\n", ret);
+
+    ret = ft_printf("m%.23dm$\n", -42);// % in middle
+    printf("return: %d\n", ret);
+
+    ret = printf("m%.23dm$\n", -42);// % in middle
+    printf("return: %d\n", ret);
+
+ //   ret = printf("m%22.3dm$\n", -42);// % in middle
+//    printf("return: %d\n", ret);
+   // printf("$%5%$\n");
+
+
+
+    //printf(" bytes: ++++%d++++\n", printf("123123"));
 /*
     //ft_init_args("sgsd", 5, "abc", 'H');
 

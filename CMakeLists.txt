@@ -18,5 +18,10 @@ add_executable( ft_printf_school
         ./libft/ft_isdigit.c
         ./libft/ft_putchar_fd.c
 
-        ./ft_print_char.c
+        processor/ft_print_char.c
+        processor/ft_print_string.c
+        processor/ft_print_d.c
+        libft/ft_strlen.c
+        libft/ft_itoa.c
+        libft/ft_calloc.c
         )

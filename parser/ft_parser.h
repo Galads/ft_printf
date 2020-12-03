@@ -18,14 +18,17 @@
 #define FLAG_DOT 0b00000100
 #define FLAG_STAR 0b00000010
 #include <stdarg.h>
+#include "../processor/ft_processor.h"
 
 typedef struct		save_conversions
 {
     va_list v_list;
 
-    unsigned long long int  flag;
-    unsigned long long int  width;
-    unsigned long long int  accuracy;
+    unsigned  int  flag;
+    int  width;
+    int  accuracy;
+
+    int                     bytes;
     /*  short           c;
       short           s;
       short           p;
@@ -38,8 +41,9 @@ typedef struct		save_conversions
       short           screen;*/
 }                   s_cn;
 
-s_cn                ft_struct_init(s_cn st_struct);
-void                ft_parser(char *format_proc, s_cn *conv);
+void                ft_struct_init(s_cn *st_struct);
+int                 ft_parser(char *format_proc, s_cn *conv);
 void                ft_print_char(char c, s_cn *list);
-
+void                ft_print_string (s_cn *list);
+void                ft_print_d(s_cn *list);
 #endif

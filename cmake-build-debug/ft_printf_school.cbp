@@ -78,9 +78,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/ft_print_char.c">
-			<Option target="ft_printf_school"/>
-		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/ft_printf.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
@@ -93,13 +90,22 @@
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_atoi.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_calloc.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_isdigit.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_itoa.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_putchar_fd.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_strchr.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_strlen.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/libft.h">
@@ -115,6 +121,15 @@
 			<Option target="ft_printf_school"/>
 		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_struct_init.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_char.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_d.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_string.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/CMakeLists.txt">

@@ -12,11 +12,12 @@
 
 #include "ft_parser.h"
 
-s_cn ft_struct_init(s_cn st_struct)
+void    ft_struct_init(s_cn *st_struct)
 {
-    st_struct.flag = 0;
-    st_struct.width = 0;
-    st_struct.accuracy = 0;
+    st_struct->flag = 0;
+    st_struct->width = 0;
+    st_struct->accuracy = 0;
+    //st_struct->bytes = 0;
  /*   st_struct.i = 0;
     st_struct.width = 0;
     st_struct.p = 0;
@@ -29,5 +30,4 @@ s_cn ft_struct_init(s_cn st_struct)
     st_struct.x = 0;
     st_struct.x_h = 0;
 */
-    return st_struct;
 }
