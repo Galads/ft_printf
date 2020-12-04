@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/brice/Desktop/printf_dir/ft_printf_school/ft_printf.h
+unistd.h
+-
+stdlib.h
+-
+./parser/ft_parser.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.h
+./processor/ft_processor.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_processor.h
+
+/Users/brice/Desktop/printf_dir/ft_printf_school/libft/libft.h
+unistd.h
+-
+stdlib.h
+-
+
+/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.h
+stdarg.h
+-
+../processor/ft_processor.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_processor.h
+
+/Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_u.c
+../ft_printf.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/ft_printf.h
+../parser/ft_parser.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.h
+../libft/libft.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/libft/libft.h
+
+/Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_processor.h
+
