@@ -129,9 +129,22 @@ CMakeFiles/ft_printf_school.dir/parser/ft_struct_init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_school.dir/parser/ft_struct_init.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_struct_init.c -o CMakeFiles/ft_printf_school.dir/parser/ft_struct_init.c.s
 
+CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.o: CMakeFiles/ft_printf_school.dir/flags.make
+CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.o: ../parser/ft_itoa_base_xu.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_itoa_base_xu.c
+
+CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_itoa_base_xu.c > CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.i
+
+CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_itoa_base_xu.c -o CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.s
+
 CMakeFiles/ft_printf_school.dir/ft_printf.c.o: CMakeFiles/ft_printf_school.dir/flags.make
 CMakeFiles/ft_printf_school.dir/ft_printf.c.o: ../ft_printf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ft_printf_school.dir/ft_printf.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ft_printf_school.dir/ft_printf.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/ft_printf.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/ft_printf.c
 
 CMakeFiles/ft_printf_school.dir/ft_printf.c.i: cmake_force
@@ -144,7 +157,7 @@ CMakeFiles/ft_printf_school.dir/ft_printf.c.s: cmake_force
 
 CMakeFiles/ft_printf_school.dir/parser/ft_parser.c.o: CMakeFiles/ft_printf_school.dir/flags.make
 CMakeFiles/ft_printf_school.dir/parser/ft_parser.c.o: ../parser/ft_parser.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ft_printf_school.dir/parser/ft_parser.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ft_printf_school.dir/parser/ft_parser.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/parser/ft_parser.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.c
 
 CMakeFiles/ft_printf_school.dir/parser/ft_parser.c.i: cmake_force
@@ -157,7 +170,7 @@ CMakeFiles/ft_printf_school.dir/parser/ft_parser.c.s: cmake_force
 
 CMakeFiles/ft_printf_school.dir/libft/ft_isdigit.c.o: CMakeFiles/ft_printf_school.dir/flags.make
 CMakeFiles/ft_printf_school.dir/libft/ft_isdigit.c.o: ../libft/ft_isdigit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ft_printf_school.dir/libft/ft_isdigit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ft_printf_school.dir/libft/ft_isdigit.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/libft/ft_isdigit.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_isdigit.c
 
 CMakeFiles/ft_printf_school.dir/libft/ft_isdigit.c.i: cmake_force
@@ -170,7 +183,7 @@ CMakeFiles/ft_printf_school.dir/libft/ft_isdigit.c.s: cmake_force
 
 CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.o: CMakeFiles/ft_printf_school.dir/flags.make
 CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.o: ../libft/ft_putchar_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_putchar_fd.c
 
 CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.i: cmake_force
@@ -181,9 +194,35 @@ CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_putchar_fd.c -o CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.s
 
+CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.o: CMakeFiles/ft_printf_school.dir/flags.make
+CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.o: ../libft/ft_putstr_fd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_putstr_fd.c
+
+CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_putstr_fd.c > CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.i
+
+CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_putstr_fd.c -o CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.s
+
+CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.o: CMakeFiles/ft_printf_school.dir/flags.make
+CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.o: ../libft/ft_tolower.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_tolower.c
+
+CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_tolower.c > CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.i
+
+CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_tolower.c -o CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.s
+
 CMakeFiles/ft_printf_school.dir/processor/ft_print_char.c.o: CMakeFiles/ft_printf_school.dir/flags.make
 CMakeFiles/ft_printf_school.dir/processor/ft_print_char.c.o: ../processor/ft_print_char.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ft_printf_school.dir/processor/ft_print_char.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ft_printf_school.dir/processor/ft_print_char.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/processor/ft_print_char.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_char.c
 
 CMakeFiles/ft_printf_school.dir/processor/ft_print_char.c.i: cmake_force
@@ -196,7 +235,7 @@ CMakeFiles/ft_printf_school.dir/processor/ft_print_char.c.s: cmake_force
 
 CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.o: CMakeFiles/ft_printf_school.dir/flags.make
 CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.o: ../processor/ft_print_string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_string.c
 
 CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.i: cmake_force
@@ -209,7 +248,7 @@ CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.s: cmake_force
 
 CMakeFiles/ft_printf_school.dir/processor/ft_print_d.c.o: CMakeFiles/ft_printf_school.dir/flags.make
 CMakeFiles/ft_printf_school.dir/processor/ft_print_d.c.o: ../processor/ft_print_d.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ft_printf_school.dir/processor/ft_print_d.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ft_printf_school.dir/processor/ft_print_d.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/processor/ft_print_d.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_d.c
 
 CMakeFiles/ft_printf_school.dir/processor/ft_print_d.c.i: cmake_force
@@ -222,7 +261,7 @@ CMakeFiles/ft_printf_school.dir/processor/ft_print_d.c.s: cmake_force
 
 CMakeFiles/ft_printf_school.dir/libft/ft_strlen.c.o: CMakeFiles/ft_printf_school.dir/flags.make
 CMakeFiles/ft_printf_school.dir/libft/ft_strlen.c.o: ../libft/ft_strlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ft_printf_school.dir/libft/ft_strlen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ft_printf_school.dir/libft/ft_strlen.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/libft/ft_strlen.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_strlen.c
 
 CMakeFiles/ft_printf_school.dir/libft/ft_strlen.c.i: cmake_force
@@ -235,7 +274,7 @@ CMakeFiles/ft_printf_school.dir/libft/ft_strlen.c.s: cmake_force
 
 CMakeFiles/ft_printf_school.dir/libft/ft_itoa.c.o: CMakeFiles/ft_printf_school.dir/flags.make
 CMakeFiles/ft_printf_school.dir/libft/ft_itoa.c.o: ../libft/ft_itoa.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ft_printf_school.dir/libft/ft_itoa.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/ft_printf_school.dir/libft/ft_itoa.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/libft/ft_itoa.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_itoa.c
 
 CMakeFiles/ft_printf_school.dir/libft/ft_itoa.c.i: cmake_force
@@ -248,7 +287,7 @@ CMakeFiles/ft_printf_school.dir/libft/ft_itoa.c.s: cmake_force
 
 CMakeFiles/ft_printf_school.dir/libft/ft_calloc.c.o: CMakeFiles/ft_printf_school.dir/flags.make
 CMakeFiles/ft_printf_school.dir/libft/ft_calloc.c.o: ../libft/ft_calloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ft_printf_school.dir/libft/ft_calloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ft_printf_school.dir/libft/ft_calloc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/libft/ft_calloc.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_calloc.c
 
 CMakeFiles/ft_printf_school.dir/libft/ft_calloc.c.i: cmake_force
@@ -259,22 +298,39 @@ CMakeFiles/ft_printf_school.dir/libft/ft_calloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_school.dir/libft/ft_calloc.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_calloc.c -o CMakeFiles/ft_printf_school.dir/libft/ft_calloc.c.s
 
+CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.o: CMakeFiles/ft_printf_school.dir/flags.make
+CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.o: ../processor/ft_print_u.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.o   -c /Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_u.c
+
+CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_u.c > CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.i
+
+CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_u.c -o CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.s
+
 # Object files for target ft_printf_school
 ft_printf_school_OBJECTS = \
 "CMakeFiles/ft_printf_school.dir/main.c.o" \
 "CMakeFiles/ft_printf_school.dir/libft/ft_atoi.c.o" \
 "CMakeFiles/ft_printf_school.dir/libft/ft_strchr.c.o" \
 "CMakeFiles/ft_printf_school.dir/parser/ft_struct_init.c.o" \
+"CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.o" \
 "CMakeFiles/ft_printf_school.dir/ft_printf.c.o" \
 "CMakeFiles/ft_printf_school.dir/parser/ft_parser.c.o" \
 "CMakeFiles/ft_printf_school.dir/libft/ft_isdigit.c.o" \
 "CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.o" \
+"CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.o" \
+"CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.o" \
 "CMakeFiles/ft_printf_school.dir/processor/ft_print_char.c.o" \
 "CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.o" \
 "CMakeFiles/ft_printf_school.dir/processor/ft_print_d.c.o" \
 "CMakeFiles/ft_printf_school.dir/libft/ft_strlen.c.o" \
 "CMakeFiles/ft_printf_school.dir/libft/ft_itoa.c.o" \
-"CMakeFiles/ft_printf_school.dir/libft/ft_calloc.c.o"
+"CMakeFiles/ft_printf_school.dir/libft/ft_calloc.c.o" \
+"CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.o"
 
 # External object files for target ft_printf_school
 ft_printf_school_EXTERNAL_OBJECTS =
@@ -283,19 +339,23 @@ ft_printf_school: CMakeFiles/ft_printf_school.dir/main.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/libft/ft_atoi.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/libft/ft_strchr.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/parser/ft_struct_init.c.o
+ft_printf_school: CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/ft_printf.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/parser/ft_parser.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/libft/ft_isdigit.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.o
+ft_printf_school: CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.o
+ft_printf_school: CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/processor/ft_print_char.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/processor/ft_print_d.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/libft/ft_strlen.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/libft/ft_itoa.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/libft/ft_calloc.c.o
+ft_printf_school: CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.o
 ft_printf_school: CMakeFiles/ft_printf_school.dir/build.make
 ft_printf_school: CMakeFiles/ft_printf_school.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C executable ft_printf_school"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/brice/Desktop/printf_dir/ft_printf_school/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking C executable ft_printf_school"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft_printf_school.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

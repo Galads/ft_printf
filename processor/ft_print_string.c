@@ -23,12 +23,17 @@ void    ft_print_string(s_cn *list)
     str = va_arg(list->v_list, char *);
     if (list->flag & FLAG_MINUS && list->flag & FLAG_DOT)
     {
+        while (str[i])
+        {
+            write(1, &str[i++], 1);
+            list->bytes++;
+        }
         while (str[i] && list->accuracy--)
         {
             write(1, &str[i++], 1);
             list->bytes++;
         }
-        while ((list->width - i))
+        while ((list->width - i) > 0 && (list->width - ft_strlen(str)))
         {
             write(1, " ", 1);
             list->width--;
@@ -37,7 +42,7 @@ void    ft_print_string(s_cn *list)
     }
     else
     {
-        while ((list->width - len) > 0)
+        while ((list->width - len) > 0 && (list->width - ft_strlen(str)))
         {
             write(1, " ", 1);
             list->width--;
@@ -48,6 +53,10 @@ void    ft_print_string(s_cn *list)
             write(1, &str[i++], 1);
             list->bytes++;
         }
+        while (str[i])
+        {
+            write(1, &str[i++], 1);
+            list->bytes++;
+        }
     }
-    //list->bytes++;
 }

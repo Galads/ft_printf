@@ -1,21 +1,35 @@
 #include "../ft_printf.h"
-#include "../parser/ft_parser.h"
 #include "../libft/libft.h"
+#include "../parser/ft_parser.h"
 
-void    ft_print_d(s_cn *list)
+void    ft_print_u(s_cn *list, int base)
 {
     char    *str;
     int     accuracy;
     int     flag;
 
-    str = ft_itoa(va_arg(list->v_list, int));
+    if (base == 17)
+    {
+        flag = 1;//111
+        base--;
+    }
+    str = ft_itoa_base_xu(va_arg(list->v_list, unsigned int), base);
+    if (flag == 1)//111
+    {
+        flag = 0;
+        while (str[flag])
+        {
+            str[flag] = (char)ft_tolower(str[flag]);
+            flag++;
+        }
+    }
     if((list->flag & FLAG_MINUS))
     {
         if (*str == '-' && (list->flag & FLAG_MINUS))
         {
             list->width--;
             str++;
-            write(1, "-", 1);
+            //write(1, "-", 1);
             list->bytes++;
             while (list->accuracy > ft_strlen(str))
             {
@@ -74,14 +88,15 @@ void    ft_print_d(s_cn *list)
                 list->bytes++;
             }
         }
-        if (*str == '0' && !accuracy) //&& ft_strlen(str) == 1 &&
-        {
-            if (list->flag & FLAG_NULL)
-                write(1, "0", 1);
-            else
-                write(1," ",1);
-        }
+        if (*str == '0' && !accuracy)                               //&& ft_strlen(str) == 1 &&
+             {
+                 if (list->flag & FLAG_NULL)
+                     write(1, "0", 1);
+                 else
+                     write(1," ",1);
+             }
         else
             write(1, &*str, ft_strlen(str));
     }
+    //ft_putstr_fd(str, 1);
 }

@@ -20,17 +20,28 @@ CMakeFiles/ft_printf_school.dir/libft/ft_itoa.c.o: ../libft/libft.h
 CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.o: ../libft/ft_putchar_fd.c
 CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.o: ../libft/libft.h
 
+CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.o: ../libft/ft_putstr_fd.c
+CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.o: ../libft/libft.h
+
 CMakeFiles/ft_printf_school.dir/libft/ft_strchr.c.o: ../libft/ft_strchr.c
 CMakeFiles/ft_printf_school.dir/libft/ft_strchr.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf_school.dir/libft/ft_strlen.c.o: ../libft/ft_strlen.c
 CMakeFiles/ft_printf_school.dir/libft/ft_strlen.c.o: ../libft/libft.h
 
+CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.o: ../libft/ft_tolower.c
+CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.o: ../libft/libft.h
+
 CMakeFiles/ft_printf_school.dir/main.c.o: ../ft_printf.h
 CMakeFiles/ft_printf_school.dir/main.c.o: ../libft/libft.h
 CMakeFiles/ft_printf_school.dir/main.c.o: ../main.c
 CMakeFiles/ft_printf_school.dir/main.c.o: ../parser/ft_parser.h
 CMakeFiles/ft_printf_school.dir/main.c.o: ../processor/ft_processor.h
+
+CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.o: ../libft/libft.h
+CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.o: ../parser/ft_itoa_base_xu.c
+CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.o: ../parser/ft_parser.h
+CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.o: ../processor/ft_processor.h
 
 CMakeFiles/ft_printf_school.dir/parser/ft_parser.c.o: ../ft_printf.h
 CMakeFiles/ft_printf_school.dir/parser/ft_parser.c.o: ../libft/libft.h
@@ -58,4 +69,10 @@ CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.o: ../libft/libft.h
 CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.o: ../parser/ft_parser.h
 CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.o: ../processor/ft_print_string.c
 CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.o: ../processor/ft_processor.h
+
+CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.o: ../ft_printf.h
+CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.o: ../libft/libft.h
+CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.o: ../parser/ft_parser.h
+CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.o: ../processor/ft_print_u.c
+CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.o: ../processor/ft_processor.h
 

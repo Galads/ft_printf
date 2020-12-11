@@ -305,6 +305,33 @@ libft/ft_putchar_fd.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/libft/ft_putchar_fd.c.s
 .PHONY : libft/ft_putchar_fd.c.s
 
+libft/ft_putstr_fd.o: libft/ft_putstr_fd.c.o
+
+.PHONY : libft/ft_putstr_fd.o
+
+# target to build an object file
+libft/ft_putstr_fd.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.o
+.PHONY : libft/ft_putstr_fd.c.o
+
+libft/ft_putstr_fd.i: libft/ft_putstr_fd.c.i
+
+.PHONY : libft/ft_putstr_fd.i
+
+# target to preprocess a source file
+libft/ft_putstr_fd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.i
+.PHONY : libft/ft_putstr_fd.c.i
+
+libft/ft_putstr_fd.s: libft/ft_putstr_fd.c.s
+
+.PHONY : libft/ft_putstr_fd.s
+
+# target to generate assembly for a file
+libft/ft_putstr_fd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/libft/ft_putstr_fd.c.s
+.PHONY : libft/ft_putstr_fd.c.s
+
 libft/ft_strchr.o: libft/ft_strchr.c.o
 
 .PHONY : libft/ft_strchr.o
@@ -359,6 +386,33 @@ libft/ft_strlen.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/libft/ft_strlen.c.s
 .PHONY : libft/ft_strlen.c.s
 
+libft/ft_tolower.o: libft/ft_tolower.c.o
+
+.PHONY : libft/ft_tolower.o
+
+# target to build an object file
+libft/ft_tolower.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.o
+.PHONY : libft/ft_tolower.c.o
+
+libft/ft_tolower.i: libft/ft_tolower.c.i
+
+.PHONY : libft/ft_tolower.i
+
+# target to preprocess a source file
+libft/ft_tolower.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.i
+.PHONY : libft/ft_tolower.c.i
+
+libft/ft_tolower.s: libft/ft_tolower.c.s
+
+.PHONY : libft/ft_tolower.s
+
+# target to generate assembly for a file
+libft/ft_tolower.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/libft/ft_tolower.c.s
+.PHONY : libft/ft_tolower.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -385,6 +439,33 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/main.c.s
 .PHONY : main.c.s
+
+parser/ft_itoa_base_xu.o: parser/ft_itoa_base_xu.c.o
+
+.PHONY : parser/ft_itoa_base_xu.o
+
+# target to build an object file
+parser/ft_itoa_base_xu.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.o
+.PHONY : parser/ft_itoa_base_xu.c.o
+
+parser/ft_itoa_base_xu.i: parser/ft_itoa_base_xu.c.i
+
+.PHONY : parser/ft_itoa_base_xu.i
+
+# target to preprocess a source file
+parser/ft_itoa_base_xu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.i
+.PHONY : parser/ft_itoa_base_xu.c.i
+
+parser/ft_itoa_base_xu.s: parser/ft_itoa_base_xu.c.s
+
+.PHONY : parser/ft_itoa_base_xu.s
+
+# target to generate assembly for a file
+parser/ft_itoa_base_xu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/parser/ft_itoa_base_xu.c.s
+.PHONY : parser/ft_itoa_base_xu.c.s
 
 parser/ft_parser.o: parser/ft_parser.c.o
 
@@ -521,6 +602,33 @@ processor/ft_print_string.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/processor/ft_print_string.c.s
 .PHONY : processor/ft_print_string.c.s
 
+processor/ft_print_u.o: processor/ft_print_u.c.o
+
+.PHONY : processor/ft_print_u.o
+
+# target to build an object file
+processor/ft_print_u.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.o
+.PHONY : processor/ft_print_u.c.o
+
+processor/ft_print_u.i: processor/ft_print_u.c.i
+
+.PHONY : processor/ft_print_u.i
+
+# target to preprocess a source file
+processor/ft_print_u.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.i
+.PHONY : processor/ft_print_u.c.i
+
+processor/ft_print_u.s: processor/ft_print_u.c.s
+
+.PHONY : processor/ft_print_u.s
+
+# target to generate assembly for a file
+processor/ft_print_u.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_printf_school.dir/build.make CMakeFiles/ft_printf_school.dir/processor/ft_print_u.c.s
+.PHONY : processor/ft_print_u.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -548,15 +656,24 @@ help:
 	@echo "... libft/ft_putchar_fd.o"
 	@echo "... libft/ft_putchar_fd.i"
 	@echo "... libft/ft_putchar_fd.s"
+	@echo "... libft/ft_putstr_fd.o"
+	@echo "... libft/ft_putstr_fd.i"
+	@echo "... libft/ft_putstr_fd.s"
 	@echo "... libft/ft_strchr.o"
 	@echo "... libft/ft_strchr.i"
 	@echo "... libft/ft_strchr.s"
 	@echo "... libft/ft_strlen.o"
 	@echo "... libft/ft_strlen.i"
 	@echo "... libft/ft_strlen.s"
+	@echo "... libft/ft_tolower.o"
+	@echo "... libft/ft_tolower.i"
+	@echo "... libft/ft_tolower.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... parser/ft_itoa_base_xu.o"
+	@echo "... parser/ft_itoa_base_xu.i"
+	@echo "... parser/ft_itoa_base_xu.s"
 	@echo "... parser/ft_parser.o"
 	@echo "... parser/ft_parser.i"
 	@echo "... parser/ft_parser.s"
@@ -572,6 +689,9 @@ help:
 	@echo "... processor/ft_print_string.o"
 	@echo "... processor/ft_print_string.i"
 	@echo "... processor/ft_print_string.s"
+	@echo "... processor/ft_print_u.o"
+	@echo "... processor/ft_print_u.i"
+	@echo "... processor/ft_print_u.s"
 .PHONY : help
 
 

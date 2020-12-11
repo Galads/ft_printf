@@ -102,16 +102,25 @@
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_putchar_fd.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_putstr_fd.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_strchr.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_strlen.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/ft_tolower.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/libft/libft.h">
 			<Option target="ft_printf_school"/>
 		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/main.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_itoa_base_xu.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.c">
@@ -130,6 +139,9 @@
 			<Option target="ft_printf_school"/>
 		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_string.c">
+			<Option target="ft_printf_school"/>
+		</Unit>
+		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_u.c">
 			<Option target="ft_printf_school"/>
 		</Unit>
 		<Unit filename="/Users/brice/Desktop/printf_dir/ft_printf_school/CMakeLists.txt">

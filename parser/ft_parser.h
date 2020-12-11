@@ -24,9 +24,9 @@ typedef struct		save_conversions
 {
     va_list v_list;
 
-    unsigned  int  flag;
-    int  width;
-    int  accuracy;
+    unsigned  int   flag;
+    int             width;
+    int             accuracy;
 
     int                     bytes;
     /*  short           c;
@@ -46,4 +46,6 @@ int                 ft_parser(char *format_proc, s_cn *conv);
 void                ft_print_char(char c, s_cn *list);
 void                ft_print_string (s_cn *list);
 void                ft_print_d(s_cn *list);
+void                ft_print_u(s_cn *list, int base);
+char                *ft_itoa_base_xu(unsigned int n, int base);
 #endif

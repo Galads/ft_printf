@@ -22,19 +22,25 @@ unistd.h
 stdlib.h
 -
 
+/Users/brice/Desktop/printf_dir/ft_printf_school/main.c
+./libft/libft.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/libft/libft.h
+./parser/ft_parser.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.h
+./processor/ft_processor.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_processor.h
+ft_printf.h
+/Users/brice/Desktop/printf_dir/ft_printf_school/ft_printf.h
+stdio.h
+-
+stdarg.h
+-
+
 /Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.h
 stdarg.h
 -
 ../processor/ft_processor.h
 /Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_processor.h
-
-/Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_print_d.c
-../ft_printf.h
-/Users/brice/Desktop/printf_dir/ft_printf_school/ft_printf.h
-../parser/ft_parser.h
-/Users/brice/Desktop/printf_dir/ft_printf_school/parser/ft_parser.h
-../libft/libft.h
-/Users/brice/Desktop/printf_dir/ft_printf_school/libft/libft.h
 
 /Users/brice/Desktop/printf_dir/ft_printf_school/processor/ft_processor.h
 

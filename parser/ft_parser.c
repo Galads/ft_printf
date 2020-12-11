@@ -27,16 +27,31 @@ int     ft_check_spec_parser(char *str, s_cn *conv)//cspdiuxX%
         return (0);
     }
     else if (*str == 'd')
+        ft_print_d(conv);
+    else if (*str == 'u')
+    {
+        ft_print_u(conv, 10);
+        return (0);
+    }
+    else if (*str == 'i')
     {
         ft_print_d(conv);
         return (0);
     }
- /*   else if (*str == 'd')
+    else if (*str == 'X')
     {
-        ft_processor(conv);
+        ft_print_u(conv, 16);
         return (0);
     }
-    else if (*str == 'i')
+    else if (*str == 'x')
+    {
+        ft_print_u(conv, 17);
+        return (0);
+    } else
+        return (1);
+    return (0);
+
+    /*else if (*str == 'i')
     {
         ft_processor(conv);
         return (0);
@@ -69,9 +84,14 @@ int    ft_parser(char *format_proc, s_cn *conv)
             ft_struct_init(conv);
             while (*format_proc)
             {
-                if (*format_proc == '*')
+                if (*format_proc == '*' && !(conv->flag & FLAG_DOT))
                 {
                     conv->width = va_arg(conv->v_list, int);
+                    format_proc++;
+                }
+                else if (*format_proc == '*' && (conv->flag & FLAG_DOT))
+                {
+                    conv->accuracy = va_arg(conv->v_list, int);
                     format_proc++;
                 }
                 if (*format_proc == '-')
@@ -82,7 +102,7 @@ int    ft_parser(char *format_proc, s_cn *conv)
                     conv->flag |= FLAG_DOT;
                 if (ft_isdigit(*format_proc) && !(conv->flag & FLAG_DOT) && !conv->width)
                     conv->width = ft_atoi(format_proc);
-                else if (ft_isdigit(*format_proc) && conv->flag & FLAG_DOT)
+                else if (ft_isdigit(*format_proc) && conv->flag & FLAG_DOT && !conv->accuracy)
                 {
                     conv->accuracy = ft_atoi(format_proc);
                     //ft_print_string(conv);
