@@ -6,12 +6,12 @@
 /*   By: brice <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/15 10:36:43 by brice             #+#    #+#             */
-/*   Updated: 2020/12/15 10:42:48 by brice            ###   ########.fr       */
+/*   Updated: 2020/12/19 05:21:47 by brice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_parser.h"
-#include "../libft/libft.h"
+//#include "../libft/libft.h"
 
 static	size_t	ft_size(unsigned long long int new, int base)
 {

@@ -1,9 +1,9 @@
-#include "../ft_printf.h"
-#include "../libft/libft.h"
+#include "ft_printf.h"
+#include "ft_parser.h"
 
 static void ft_print(s_cn *list, char *str)
 {
-    while (list->width > 0 && list->width > ft_strlen(str))
+    while (list->width > 0 && list->width > (int)ft_strlen(str))
     {
         list->bytes++;
         list->width--;
@@ -13,9 +13,15 @@ static void ft_print(s_cn *list, char *str)
 
 void    ft_print_p(s_cn *list)
 {
-    char    *str;
+    char                    *str;
 
-    str = ft_itoa_base_ull(va_arg(list->v_list, unsigned long long), 16);
+    unsigned long long      num;
+    num = va_arg(list->v_list, unsigned long long);
+    if (!num  && !list->accuracy && list->flag & FLAG_DOT)
+        str = "0x";
+    else
+        str = ft_itoa_base_ull(num, 16);
+
     list->bytes += ft_strlen(str);
     if (list->width < 0)
     {
@@ -24,7 +30,7 @@ void    ft_print_p(s_cn *list)
     }
     if((list->flag & FLAG_MINUS))
     {
-        write(1, &*str, list->bytes);
+        write(1, &*str, ft_strlen(str));
         ft_print(list, str);
     }
     else

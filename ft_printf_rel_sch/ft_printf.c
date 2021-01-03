@@ -1,5 +1,6 @@
-#include "./parser/ft_parser.h"
-#include "./processor/ft_processor.h"
+#include "ft_parser.h"
+#include "ft_printf.h"
+//#include "./include/ft_processor.h"
 
 int ft_printf(char *format, ...)
 {
