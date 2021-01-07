@@ -14,14 +14,12 @@ static void ft_print(s_cn *list, char *str)
 void    ft_print_p(s_cn *list)
 {
     char                    *str;
-
     unsigned long long      num;
     num = va_arg(list->v_list, unsigned long long);
     if (!num  && !list->accuracy && list->flag & FLAG_DOT)
         str = "0x";
     else
         str = ft_itoa_base_ull(num, 16);
-
     list->bytes += ft_strlen(str);
     if (list->width < 0)
     {

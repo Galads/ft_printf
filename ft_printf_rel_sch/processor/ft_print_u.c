@@ -6,136 +6,114 @@
 /*   By: brice <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 05:37:28 by brice             #+#    #+#             */
-/*   Updated: 2020/12/21 17:00:22 by brice            ###   ########.fr       */
+/*   Updated: 2021/01/07 15:53:38 by brice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_parser.h"
+#include "ft_helper.h"
 
-void		ft_print_u(s_cn *list, int base) {
-    char    *str;
-    int     accuracy;
-    int     flag;
-
-    flag = 0;
-	accuracy = list->accuracy;
-    if (base == 17)
-    {
-        flag = 1;//111
-        base--;
+static  void	ft_loop_else(s_cn *list, char **str)
+{
+	while (list->width - list->accuracy > 0 &&
+										list->width > (int)ft_strlen(*str))
+	{
+		list->bytes++;
+        list->width--;
+        write(1, " ", 1);
     }
-    str = ft_itoa_base_xu(va_arg(list->v_list, unsigned int), base);
-    if (flag == 1)//111
+}
+
+static void ft_check_minus_sec(s_cn *list, char **str, int *accuracy, int *flag)
+{
+    if (*accuracy < 0)
     {
-        flag = 0;
-        while (str[flag])
-        {
-            str[flag] = (char)ft_tolower(str[flag]);
-            flag++;
+		list->accuracy *= -1;
+		*accuracy *= -1;
+    }
+	list->bytes += (int)ft_strlen(*str);
+	if (**str == '-' && !(list->flag & FLAG_MINUS))
+	{
+        list->width--;
+        (*str)++;
+        *flag = 1;
+	}
+	while (list->width - list->accuracy > 0  &&
+    							list->width > (int)ft_strlen(*str))
+	{
+        list->bytes++;
+        list->width--;
+		if ((list->flag & FLAG_NULL && !(list->flag & FLAG_DOT))
+											|| *accuracy < 0)
+		{
+            write(1, "0", 1);
+            continue;
         }
-    }
+        write(1, " ", 1);
+	}
+}
 
-    if (list->width < 0)
+static void ft_check_minus_third_helper(s_cn *list, char **str)
+{
+	while (list->width - ft_strlen(*str) > 0 && list->accuracy)
+	{
+		write(1, "0", 1);
+		list->width--;
+		list->bytes++;
+	}
+}
+
+static void ft_check_minus_third(s_cn *list,char **str, int *accuracy)
+{
+    if (list->flag & FLAG_DOT && *accuracy > 0)
     {
-        list->width *= -1;
-        list->flag |= FLAG_MINUS;
-    }
-    if((list->flag & FLAG_MINUS))
-    {
-        if (*str == '-' && (list->flag & FLAG_MINUS))
-        {
-            list->width--;
-            str++;
-            write(1, "-", 1);
-            list->bytes++;
-            while (list->accuracy > (int)ft_strlen(str) && list->accuracy > 0)
-            {
-                write(1, "0", 1);
-                list->accuracy--;
-                list->bytes++;
-                list->width--;
-            }
-        }
-        while (list->accuracy > (int)ft_strlen(str) && list->accuracy > 0)
+        while (list->accuracy > (int)ft_strlen(*str))
         {
             write(1, "0", 1);
             list->accuracy--;
             list->bytes++;
-            list->width--;
-        }
-        if (*str == '0'&& list->flag & FLAG_DOT && !accuracy)// no if 
-            write(1, " ", ft_strlen(str));//
-        else//
-            write(1, &*str, ft_strlen(str));//
-        list->bytes += ft_strlen(str);
-        while (list->width - list->accuracy > 0 && list->width > (int)ft_strlen(str))
-        {
-            list->bytes++;
-            list->width--;
-            write(1, " ", 1);
         }
     }
     else
+		ft_check_minus_third_helper(list, &*str);
+    if (**str == '0' && (int)ft_strlen(*str) == 1 &&
+    								list->flag & FLAG_DOT && list->width)
     {
-        accuracy = list->accuracy;
-        if (accuracy < 0)
-        {
-            list->accuracy *= -1;
-            accuracy *= -1;
-        }
-        flag = 0;
-        list->bytes += ft_strlen(str);
-        if (*str == '-' && !(list->flag & FLAG_MINUS))
-        {
-            list->width--;
-            str++;
-            flag = 1;
-        }
-        while (list->width - list->accuracy > 0  && list->width > (int)ft_strlen(str))
-        {
-            list->bytes++;
-            list->width--;
-            // list->accuracy--;
-            if ((list->flag & FLAG_NULL && !(list->flag & FLAG_DOT)) || accuracy < 0)
-            {
-                write(1, "0", 1);
-                continue;
-            }
-            write(1, " ", 1);
-        }
+        if ((list->flag & FLAG_DOT) && *accuracy)
+            write(1, "0", 1);
+        else
+            write(1," ",1);
+    }
+    else if (**str == '0' && !*accuracy && list->flag & FLAG_DOT)
+        list->bytes--;
+    else
+        write(1, *str, (int)ft_strlen(*str));
+}
+
+void		ft_print_u(s_cn *list, int base) 
+{
+	char	*str;
+    int		accuracy;
+    int		flag;
+
+	flag = 0;
+    if (!(str = ft_helper_check_u(list, &accuracy, &flag, &base)))
+    {
+        list->bytes = -1;
+        return ;
+    }
+    if((list->flag & FLAG_MINUS))
+    {
+        ft_check_minus_helper(list, &str, &accuracy);
+        ft_loop_else(list, &str);
+    }
+    else
+    {
+		accuracy = list->accuracy;
+		flag = 0;
+    	ft_check_minus_sec(list, &str, &accuracy, &flag);
         if (flag == 1)
             write(1, "-", 1);
-        if (list->flag & FLAG_DOT && accuracy > 0)
-        {
-            while (list->accuracy > (int)ft_strlen(str))
-            {
-                write(1, "0", 1);
-                list->accuracy--;
-                list->bytes++;
-            }
-        }
-        else
-        {
-            while (list->width - ft_strlen(str) > 0 && list->accuracy)
-            {
-                write(1, "0", 1);
-                list->width--;
-                list->bytes++;
-            }
-        }
-        if (*str == '0' && ft_strlen(str) == 1 && list->flag & FLAG_DOT && list->width) //&& ft_strlen(str) == 1 && //!accuracy
-        {
-            if ((list->flag & FLAG_DOT) && accuracy)//&& !(list->width))
-                write(1, "0", 1);
-            else
-                write(1," ",1);
-        }
-        else if (*str == '0' && !accuracy && list->flag & FLAG_DOT)
-        {
-//            write(1, "X", 1);
-            list->bytes--;
-        }
-        else
-            write(1, &*str, ft_strlen(str));
+        ft_check_minus_third(list, &str, &accuracy);
     }
 }

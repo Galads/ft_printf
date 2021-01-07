@@ -6,7 +6,7 @@
 #    By: brice <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/19 04:22:21 by brice             #+#    #+#              #
-#    Updated: 2020/12/19 05:57:07 by brice            ###   ########.fr        #
+#    Updated: 2021/01/07 15:33:15 by brice            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,14 +25,21 @@ INCLUDES	= ./include/
 
 PROCDIR 	= ./processor/
 
+HELPDIR		=./helper/
+
 LIBFT		= libft.a
 
 SRCS		= ft_printf.c $(PARSERDIR)ft_itoa_base_ull.c $(PARSERDIR)ft_itoa_base_xu.c  \
 						  $(PARSERDIR)ft_parser.c  $(PARSERDIR)ft_struct_init.c \
 						  $(PROCDIR)ft_print_char.c $(PROCDIR)ft_print_char.c \
 						  $(PROCDIR)ft_print_d.c   $(PROCDIR)ft_print_p.c \
-						  $(PROCDIR)ft_print_percent.c $(PROCDIR)ft_print_string.c\
-						  $(PROCDIR)ft_print_u.c
+						  $(PROCDIR)ft_print_percent.c $(PROCDIR)ft_print_string.c \
+						  $(PROCDIR)ft_print_u.c \
+						  \
+						  $(HELPDIR)ft_helper_prints.c \
+						  $(HELPDIR)ft_helper_check_u.c $(HELPDIR)ft_check_minus_helper.c \
+						  $(HELPDIR)ft_while_print_null_helper.c 
+						  
 
 OBJS		= $(SRCS:.c=.o)
 

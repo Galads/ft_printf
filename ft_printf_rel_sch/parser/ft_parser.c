@@ -6,12 +6,11 @@
 /*   By: brice <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 18:16:34 by brice             #+#    #+#             */
-/*   Updated: 2020/12/19 05:25:44 by brice            ###   ########.fr       */
+/*   Updated: 2021/01/06 18:23:15 by brice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_parser.h"
-//#include "../ft_printf.h"
 
 int		ft_check_spec_parser(char *str, s_cn *conv)
 {
