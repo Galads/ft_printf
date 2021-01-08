@@ -6,28 +6,24 @@
 /*   By: brice <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 02:20:09 by brice             #+#    #+#             */
-/*   Updated: 2021/01/06 18:26:55 by brice            ###   ########.fr       */
+/*   Updated: 2021/01/08 19:44:01 by brice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_parser.h"
 
-void	ft_print(s_cn *list)
+void	ft_print(t_cn *list)
 {
 	if (list->width)
-	{
 		if (list->width != 0)
-		{
 			while (--list->width)
 			{
 				list->bytes++;
 				write(1, " ", 1);
 			}
-		}
-	}
 }
 
-void	ft_print_char(s_cn *list)
+void	ft_print_char(t_cn *list)
 {
 	char chr;
 

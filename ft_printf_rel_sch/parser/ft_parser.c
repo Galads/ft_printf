@@ -6,13 +6,13 @@
 /*   By: brice <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 18:16:34 by brice             #+#    #+#             */
-/*   Updated: 2021/01/06 18:23:15 by brice            ###   ########.fr       */
+/*   Updated: 2021/01/08 19:16:05 by brice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_parser.h"
 
-int		ft_check_spec_parser(char *str, s_cn *conv)
+int		ft_check_spec_parser(char *str, t_cn *conv)
 {
 	if (*str == 'c')
 		ft_print_char(conv);
@@ -37,7 +37,7 @@ int		ft_check_spec_parser(char *str, s_cn *conv)
 	return (0);
 }
 
-int  ft_parse_str(s_cn *conv, char **format_proc, char *format_pr_s)
+int		ft_parse_str(t_cn *conv, char **format_proc, char *format_pr_s)
 {
 	if (**format_proc == '*' && !(conv->flag & FLAG_DOT))
 	{
@@ -58,7 +58,7 @@ int  ft_parse_str(s_cn *conv, char **format_proc, char *format_pr_s)
 	if (ft_isdigit(**format_proc) && !(conv->flag & FLAG_DOT) && !conv->width)
 		conv->width = ft_atoi(*format_proc);
 	else if (ft_isdigit(**format_proc) && conv->flag & FLAG_DOT &&
-			 !conv->accuracy)
+															!conv->accuracy)
 		conv->accuracy = ft_atoi(*format_proc);
 	if (!(ft_check_spec_parser(*format_proc, conv)))
 		return (-1);
@@ -66,7 +66,7 @@ int  ft_parse_str(s_cn *conv, char **format_proc, char *format_pr_s)
 	return (0);
 }
 
-int		ft_parser(char *format_proc, s_cn *conv)
+int		ft_parser(char *format_proc, t_cn *conv)
 {
 	char	format_pr_s;
 

@@ -6,13 +6,13 @@
 /*   By: brice <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 18:15:58 by brice             #+#    #+#             */
-/*   Updated: 2020/12/15 11:45:20 by brice            ###   ########.fr       */
+/*   Updated: 2021/01/08 19:16:29 by brice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_parser.h"
 
-void	ft_struct_init(s_cn *st_struct)
+void	ft_struct_init(t_cn *st_struct)
 {
 	st_struct->flag = 0;
 	st_struct->width = 0;

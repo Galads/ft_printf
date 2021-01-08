@@ -6,16 +6,16 @@
 /*   By: brice <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 02:19:53 by brice             #+#    #+#             */
-/*   Updated: 2021/01/03 15:58:58 by brice            ###   ########.fr       */
+/*   Updated: 2021/01/08 19:45:45 by brice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_parser.h"
 #include "ft_helper.h"
 
-static	void	ft_check_first(s_cn *list, char **str, int *accuracy)
+static	void	ft_check_first(t_cn *list, char **str, int *accuracy)
 {
-	if(list->width < 0)
+	if (list->width < 0)
 	{
 		list->width *= -1;
 		list->flag |= FLAG_MINUS;
@@ -31,12 +31,12 @@ static	void	ft_check_first(s_cn *list, char **str, int *accuracy)
 	*accuracy = list->accuracy;
 }
 
-void ft_print_plus(s_cn *list, char **str, int *i, int *accuracy)
+static	void	ft_print_plus(t_cn *list, char **str, int *i, int *accuracy)
 {
 	while ((*str)[*i] && !(list->flag & FLAG_DOT))
 		ft_print_helper(list, str, i);
 	while ((*str)[*i] && !list->accuracy && list->flag & FLAG_DOT
-		   && (list->flag & FLAG_NULL))
+											&& (list->flag & FLAG_NULL))
 		ft_print_helper(list, str, i);
 	while ((*str)[*i] && (*accuracy)--)
 		ft_print_helper(list, str, i);
@@ -46,14 +46,14 @@ void ft_print_plus(s_cn *list, char **str, int *i, int *accuracy)
 			ft_print_second_helper(list);
 	}
 	while (list->width - list->accuracy > 0 &&
-		   list->width - (int)ft_strlen(*str) > 0)
+									list->width - (int)ft_strlen(*str) > 0)
 		ft_print_second_helper(list);
 }
 
-void ft_print_minus(s_cn *list, char **str, int *i)
+static	void	ft_print_minus(t_cn *list, char **str, int *i)
 {
 	while (list->width - list->accuracy > 0 &&
-		   list->width - (int)ft_strlen(*str) > 0)
+							list->width - (int)ft_strlen(*str) > 0)
 		ft_print_second_helper(list);
 	if (list->flag & FLAG_DOT)
 	{
@@ -68,17 +68,17 @@ void ft_print_minus(s_cn *list, char **str, int *i)
 		ft_print_helper(list, str, i);
 }
 
-void    ft_print_string(s_cn *list)
+void			ft_print_string(t_cn *list)
 {
-    char *str;
-    int i;
-    int accuracy;
+	char	*str;
+	int		i;
+	int		accuracy;
 
 	i = 0;
-    str = va_arg(list->v_list, char *);
+	str = va_arg(list->v_list, char *);
 	ft_check_first(list, &str, &accuracy);
-    if (list->flag & FLAG_MINUS)
-    	ft_print_plus(list, &str, &i, &accuracy);
-    else
-    	ft_print_minus(list, &str, &i);
+	if (list->flag & FLAG_MINUS)
+		ft_print_plus(list, &str, &i, &accuracy);
+	else
+		ft_print_minus(list, &str, &i);
 }
