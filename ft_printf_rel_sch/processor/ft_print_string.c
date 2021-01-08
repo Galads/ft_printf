@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_parser.h"
+#include "ft_helper.h"
 
 static	void	ft_check_first(s_cn *list, char **str, int *accuracy)
 {
@@ -30,17 +31,41 @@ static	void	ft_check_first(s_cn *list, char **str, int *accuracy)
 	*accuracy = list->accuracy;
 }
 
-static	void	ft_print(s_cn *list, char **str, int *i)
+void ft_print_plus(s_cn *list, char **str, int *i, int *accuracy)
 {
-	write(1, &(*str)[(*i)++], 1);
-	list->bytes++;
+	while ((*str)[*i] && !(list->flag & FLAG_DOT))
+		ft_print_helper(list, str, i);
+	while ((*str)[*i] && !list->accuracy && list->flag & FLAG_DOT
+		   && (list->flag & FLAG_NULL))
+		ft_print_helper(list, str, i);
+	while ((*str)[*i] && (*accuracy)--)
+		ft_print_helper(list, str, i);
+	if (list->flag & FLAG_DOT)
+	{
+		while (list->width - list->accuracy > 0)
+			ft_print_second_helper(list);
+	}
+	while (list->width - list->accuracy > 0 &&
+		   list->width - (int)ft_strlen(*str) > 0)
+		ft_print_second_helper(list);
 }
 
-static	void	ft_print_second(s_cn *list)
+void ft_print_minus(s_cn *list, char **str, int *i)
 {
-	list->width--;
-	list->bytes++;
-	write(1, " ", 1);
+	while (list->width - list->accuracy > 0 &&
+		   list->width - (int)ft_strlen(*str) > 0)
+		ft_print_second_helper(list);
+	if (list->flag & FLAG_DOT)
+	{
+		while (list->width - list->accuracy > 0)
+			ft_print_second_helper(list);
+	}
+	while ((*str)[*i] && list->accuracy--)
+		ft_print_helper(list, str, i);
+	while ((*str)[*i] && !list->accuracy && list->flag & FLAG_DOT)
+		ft_print_helper(list, str, i);
+	while ((*str)[*i] && !(list->flag & FLAG_DOT))
+		ft_print_helper(list, str, i);
 }
 
 void    ft_print_string(s_cn *list)
@@ -49,42 +74,11 @@ void    ft_print_string(s_cn *list)
     int i;
     int accuracy;
 
-    i = 0;
+	i = 0;
     str = va_arg(list->v_list, char *);
 	ft_check_first(list, &str, &accuracy);
     if (list->flag & FLAG_MINUS)
-    {
-        while (str[i] && !(list->flag & FLAG_DOT))
-        	ft_print(list, &str, &i);
-        while (str[i] && !list->accuracy && list->flag & FLAG_DOT
-        									&& (list->flag & FLAG_NULL))
-        	ft_print(list, &str, &i);
-        while (str[i] && accuracy--)
-			ft_print(list, &str, &i);
-        if (list->flag & FLAG_DOT)
-        {
-            while (list->width - list->accuracy > 0)
-            	ft_print_second(list);
-        }
-        while (list->width - list->accuracy > 0 &&
-        						list->width - (int)ft_strlen(str) > 0)
-        	ft_print_second(list);
-    }
+    	ft_print_plus(list, &str, &i, &accuracy);
     else
-    {
-        while (list->width - list->accuracy > 0 &&
-        						list->width - (int)ft_strlen(str) > 0)
-        	ft_print_second(list);
-        if (list->flag & FLAG_DOT)
-        {
-            while (list->width - list->accuracy > 0)
-				ft_print_second(list);
-        }
-        while (str[i] && list->accuracy--)
-			ft_print(list, &str, &i);
-        while (str[i] && !list->accuracy && list->flag & FLAG_DOT)
-			ft_print(list, &str, &i);
-        while (str[i] && !(list->flag & FLAG_DOT))
-			ft_print(list, &str, &i);
-    }
+    	ft_print_minus(list, &str, &i);
 }

@@ -37,9 +37,12 @@ SRCS		= ft_printf.c $(PARSERDIR)ft_itoa_base_ull.c $(PARSERDIR)ft_itoa_base_xu.c
 						  $(PROCDIR)ft_print_u.c \
 						  \
 						  $(HELPDIR)ft_helper_prints.c \
+						  \
 						  $(HELPDIR)ft_helper_check_u.c $(HELPDIR)ft_check_minus_helper.c \
-						  $(HELPDIR)ft_while_print_null_helper.c 
-						  
+						  $(HELPDIR)ft_while_print_null_helper.c \
+						  \
+						  $(HELPDIR)ft_print_helpers_str.c
+
 
 OBJS		= $(SRCS:.c=.o)
 

@@ -37,9 +37,39 @@ int		ft_check_spec_parser(char *str, s_cn *conv)
 	return (0);
 }
 
+int  ft_parse_str(s_cn *conv, char **format_proc, char *format_pr_s)
+{
+	if (**format_proc == '*' && !(conv->flag & FLAG_DOT))
+	{
+		conv->width = va_arg(conv->v_list, int);
+		(*format_proc)++;
+	}
+	else if (**format_proc == '*' && (conv->flag & FLAG_DOT))
+	{
+		conv->accuracy = va_arg(conv->v_list, int);
+		(*format_proc)++;
+	}
+	if (**format_proc == '-')
+		conv->flag |= FLAG_MINUS;
+	else if (*format_pr_s == '0' && !(conv->flag & FLAG_MINUS))
+		conv->flag |= FLAG_NULL;
+	if (**format_proc == '.')
+		conv->flag |= FLAG_DOT;
+	if (ft_isdigit(**format_proc) && !(conv->flag & FLAG_DOT) && !conv->width)
+		conv->width = ft_atoi(*format_proc);
+	else if (ft_isdigit(**format_proc) && conv->flag & FLAG_DOT &&
+			 !conv->accuracy)
+		conv->accuracy = ft_atoi(*format_proc);
+	if (!(ft_check_spec_parser(*format_proc, conv)))
+		return (-1);
+	(*format_proc)++;
+	return (0);
+}
+
 int		ft_parser(char *format_proc, s_cn *conv)
 {
 	char	format_pr_s;
+
 	conv->bytes = 0;
 	while (*format_proc)
 	{
@@ -50,33 +80,8 @@ int		ft_parser(char *format_proc, s_cn *conv)
 				format_proc++;
 			format_pr_s = *format_proc;
 			while (*format_proc)
-			{
-				if (*format_proc == '*' && !(conv->flag & FLAG_DOT))
-				{
-					conv->width = va_arg(conv->v_list, int);
-					format_proc++;
-				}
-				else if (*format_proc == '*' && (conv->flag & FLAG_DOT))
-				{
-					conv->accuracy = va_arg(conv->v_list, int);
-					format_proc++;
-				}
-				if (*format_proc == '-')
-					conv->flag |= FLAG_MINUS;
-				else if (format_pr_s == '0' && !(conv->flag & FLAG_MINUS))
-					conv->flag |= FLAG_NULL;
-				if (*format_proc == '.')
-					conv->flag |= FLAG_DOT;
-				if (ft_isdigit(*format_proc) && !(conv->flag & FLAG_DOT) &&
-																!conv->width)
-					conv->width = ft_atoi(format_proc);
-				else if (ft_isdigit(*format_proc) && conv->flag & FLAG_DOT &&
-															!conv->accuracy)
-					conv->accuracy = ft_atoi(format_proc);
-				if (!(ft_check_spec_parser(format_proc, conv)))
+				if (ft_parse_str(conv, &format_proc, &format_pr_s) == -1)
 					break ;
-				format_proc++;
-			}
 		}
 		else
 		{
