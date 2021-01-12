@@ -6,7 +6,7 @@
 /*   By: brice <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/08 17:25:50 by brice             #+#    #+#             */
-/*   Updated: 2021/01/08 19:44:25 by brice            ###   ########.fr       */
+/*   Updated: 2021/01/12 17:57:19 by brice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,7 @@ static	void	flag_minus_loop(t_cn *list, char **str, int *accuracy)
 void			ft_print_d(t_cn *list)
 {
 	char	*str;
+	char	*save;
 	int		accuracy;
 	int		flag;
 
@@ -111,11 +112,8 @@ void			ft_print_d(t_cn *list)
 		list->bytes = -1;
 		return ;
 	}
-	if (list->width < 0)
-	{
-		list->width *= -1;
-		list->flag |= FLAG_MINUS;
-	}
+	save = str;
+	ft_first_check_d_help(list);
 	if ((list->flag & FLAG_MINUS))
 		flag_minus(list, &str);
 	else
@@ -125,4 +123,5 @@ void			ft_print_d(t_cn *list)
 		ft_helper_print(list, &str, &accuracy, &flag);
 		ft_helper_print_second(list, &str, &accuracy);
 	}
+	free(save);
 }

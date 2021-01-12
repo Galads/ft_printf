@@ -6,12 +6,12 @@
 #    By: brice <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/19 04:22:21 by brice             #+#    #+#              #
-#    Updated: 2021/01/07 15:33:15 by brice            ###   ########.fr        #
+#    Updated: 2021/01/12 21:16:47 by brice            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-CC			= gcc
+GCC			= gcc
 
 CFLAGS		= -Wall -Wextra -Werror
 
@@ -21,13 +21,17 @@ LIBFTDIR	= ./libft/
 
 PARSERDIR	= ./parser/
 
-INCLUDES	= ./include/
+INCLUDE 	= ./include/
 
 PROCDIR 	= ./processor/
 
-HELPDIR		=./helper/
+HELPDIR		= ./helper/
 
 LIBFT		= libft.a
+
+FILETEST	= tests_func.c
+
+VALUES 		= \"FFFFF%10s\", \"hello\"
 
 SRCS		= ft_printf.c $(PARSERDIR)ft_itoa_base_ull.c $(PARSERDIR)ft_itoa_base_xu.c  \
 						  $(PARSERDIR)ft_parser.c  $(PARSERDIR)ft_struct_init.c \
@@ -41,39 +45,40 @@ SRCS		= ft_printf.c $(PARSERDIR)ft_itoa_base_ull.c $(PARSERDIR)ft_itoa_base_xu.c
 						  $(HELPDIR)ft_helper_check_u.c $(HELPDIR)ft_check_minus_helper.c \
 						  $(HELPDIR)ft_while_print_null_helper.c \
 						  \
-						  $(HELPDIR)ft_print_helpers_str.c
-
+						  $(HELPDIR)ft_print_helpers_str.c \
+						  \
+						  $(HELPDIR)ft_first_check_d_help.c\
 
 OBJS		= $(SRCS:.c=.o)
 
-GREEN		= \033[0;32m
-
-RED			= \033[0;31m
-
-RESET		= \033[0m
-
 %.o:	%.c
-			@$(CC) $(CFLAGS) -I $(INCLUDES) -c $< -o $@
+			@$(GCC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
 $(NAME):	$(OBJS)
-			@echo "$(GREEN)|.........Compilation.........|$(RESET)"
 			@make -C $(LIBFTDIR)
 			@cp  $(LIBFTDIR)$(LIBFT) $(NAME)
 			@ar rcs $(NAME) $(OBJS)
-			@echo "$(NAME): $(GREEN)$(NAME) was created$(RESET)"
+			@echo "\033[42m\033[31mbuild libftprintf\033[0m"
 
 all:		$(NAME)
 
 clean:
+			@echo "\033[31m\033[42mclean\033[0m\033[31m libft & libftprintf\033[0m"
 			@make -C $(LIBFTDIR) clean
-			@rm -rf $(OBJS)
-			@echo "$(LIBFT): $(RED)object files were deleted$(RESET)"
-			@echo "$(NAME): $(RED)object files were deleted$(RESET)"
+			@rm -rf $(OBJS) #$(FILETEST)
 
 fclean:		clean
+			@echo "\033[31m\033[42mfclean\033[0m\033[31m libft & libftprintf\033[0m"
 			@make -C $(LIBFTDIR) fclean
-			@echo "$(LIBFT): $(RED)$(LIBFT) was deleted$(RESET)"
-			@echo "$(NAME): $(RED)$(NAME) was deleted$(RESET)"
 			@rm -rf $(NAME) $(LIBFT)
 
 re:			fclean all
+
+test:
+			@echo "\033[35msuccess\033[0m"
+			@touch $(FILETEST)
+			@echo "#include \"ft_printf.h\"\n#include <stdio.h>\n\nint main ()\n{\n\tft_printf($(VALUES));\n\tprintf($(VALUES));\n}" > $(FILETEST)
+
+# compile:
+
+#.PHONY: all clean fclean re $(NAME) test compile

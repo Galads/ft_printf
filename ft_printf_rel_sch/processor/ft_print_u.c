@@ -6,7 +6,7 @@
 /*   By: brice <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 05:37:28 by brice             #+#    #+#             */
-/*   Updated: 2021/01/08 19:46:12 by brice            ###   ########.fr       */
+/*   Updated: 2021/01/12 18:06:42 by brice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,11 @@ static	void	ft_check_minus_third_helper(t_cn *list, char **str)
 	}
 }
 
-static	void	ft_check_minus_third(t_cn *list, char **str, int *accuracy)
+static	void	ft_check_minus_third(t_cn *list, char **str,
+													int *accuracy, int *flag)
 {
+	if (*flag == 1)
+		write(1, "-", 1);
 	if (list->flag & FLAG_DOT && *accuracy > 0)
 	{
 		while (list->accuracy > (int)ft_strlen(*str))
@@ -94,6 +97,7 @@ static	void	ft_check_minus_third(t_cn *list, char **str, int *accuracy)
 void			ft_print_u(t_cn *list, int base)
 {
 	char	*str;
+	char	*save;
 	int		accuracy;
 	int		flag;
 
@@ -103,6 +107,7 @@ void			ft_print_u(t_cn *list, int base)
 		list->bytes = -1;
 		return ;
 	}
+	save = str;
 	if ((list->flag & FLAG_MINUS))
 	{
 		ft_check_minus_helper(list, &str, &accuracy);
@@ -113,8 +118,7 @@ void			ft_print_u(t_cn *list, int base)
 		accuracy = list->accuracy;
 		flag = 0;
 		ft_check_minus_sec(list, &str, &accuracy, &flag);
-		if (flag == 1)
-			write(1, "-", 1);
-		ft_check_minus_third(list, &str, &accuracy);
+		ft_check_minus_third(list, &str, &accuracy, &flag);
 	}
+	free(save);
 }

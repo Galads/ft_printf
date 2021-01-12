@@ -6,7 +6,7 @@
 /*   By: brice <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 15:37:33 by brice             #+#    #+#             */
-/*   Updated: 2021/01/08 19:19:26 by brice            ###   ########.fr       */
+/*   Updated: 2021/01/11 16:29:35 by brice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	ft_check_minus_helper(t_cn *list, char **str, int *accuracy)
 	}
 	ft_while_print_null_helper(list, str);
 	if (**str == '0' && list->flag & FLAG_DOT && !*accuracy)
-		write(1, " ", ft_strlen(*str));
+		write(1, " ", (int)ft_strlen(*str));
 	else
-		write(1, *str, ft_strlen(*str));
-	list->bytes += ft_strlen(*str);
+		write(1, *str, (int)ft_strlen(*str));
+	list->bytes += (int)ft_strlen(*str);
 }
