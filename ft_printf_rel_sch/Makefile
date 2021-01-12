@@ -6,7 +6,7 @@
 #    By: brice <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/19 04:22:21 by brice             #+#    #+#              #
-#    Updated: 2021/01/12 21:16:47 by brice            ###   ########.fr        #
+#    Updated: 2021/01/12 21:49:09 by brice            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ LIBFT		= libft.a
 
 FILETEST	= tests_func.c
 
-VALUES 		= \"FFFFF%10s\", \"hello\"
+VALUES 		= \"FFFFF%10.20s\\\n\", \"hello\"
 
 SRCS		= ft_printf.c $(PARSERDIR)ft_itoa_base_ull.c $(PARSERDIR)ft_itoa_base_xu.c  \
 						  $(PARSERDIR)ft_parser.c  $(PARSERDIR)ft_struct_init.c \
@@ -70,15 +70,15 @@ clean:
 fclean:		clean
 			@echo "\033[31m\033[42mfclean\033[0m\033[31m libft & libftprintf\033[0m"
 			@make -C $(LIBFTDIR) fclean
-			@rm -rf $(NAME) $(LIBFT)
+			@rm -rf $(NAME) $(LIBFT) $(FILETEST) a.out
 
 re:			fclean all
 
 test:
-			@echo "\033[35msuccess\033[0m"
+			@echo "\033[35msuccess $(FILETEST)\033[0m"
 			@touch $(FILETEST)
-			@echo "#include \"ft_printf.h\"\n#include <stdio.h>\n\nint main ()\n{\n\tft_printf($(VALUES));\n\tprintf($(VALUES));\n}" > $(FILETEST)
+			@echo "#include \"ft_printf.h\"\n#include <stdio.h>\n\nint main()\n{\n\tft_printf($(VALUES));\n\tprintf($(VALUES));\n}" > $(FILETEST)
 
-# compile:
-
-#.PHONY: all clean fclean re $(NAME) test compile
+compile:
+		@echo "\033[35m<--compile $(FILETEST)-->\033[0m"
+		@$(GCC) $(CFLAGS) $(FILETEST) -I $(INCLUDE) -L. -lftprintf
