@@ -6,7 +6,7 @@
 #    By: brice <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/19 04:22:21 by brice             #+#    #+#              #
-#    Updated: 2021/01/12 21:49:09 by brice            ###   ########.fr        #
+#    Updated: 2021/01/13 19:40:58 by brice            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ all:		$(NAME)
 clean:
 			@echo "\033[31m\033[42mclean\033[0m\033[31m libft & libftprintf\033[0m"
 			@make -C $(LIBFTDIR) clean
-			@rm -rf $(OBJS) #$(FILETEST)
+			@rm -rf $(OBJS) 
 
 fclean:		clean
 			@echo "\033[31m\033[42mfclean\033[0m\033[31m libft & libftprintf\033[0m"
